@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>CIRCLE</title>
+    <script async src="js/opencv.js"></script>
+    <script src="js/utils.js"></script>
+    
+</head>
+<body>
+    <!-------param-form-------------------------------------------->
+    <div id="connectDiv" class="connect-div">
+        <h4 id="close2">x</h4>
+        <h2 id="connectedId">Parameter update</h2>
+        <input type="text" id="labelMax" value="lebal max value" class="inp" />
+        <div id="labelBtn" class="connect-btn">
+            <h3 id="connect">update</h3>
+        </div>
+        <input type="text" id="countMax" value="count max value" class="inp" />
+        <div id="countBtn" class="connect-btn">
+            <h3 id="connect">update</h3>
+        </div>
+        <input type="text" id="imgNo" value="number of images" class="inp" />
+        <div id="imgBtn" class="connect-btn">
+            <h3 id="connect">update</h3>
+        </div>
+    </div>
+    <!-------param-form-------------------------------------------->
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-2" id="sideBar">
+                <div class="side-bar">
+                    <h2>Circle Clint</h2>
+                    <ul>
+                        <li id="reeBootTr">Reboot</li>
+                        <li id="clrTr">Clear</li>
+                        <li id="paramTr">Parameters</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10" id="mainBox">
+                <!---BOX-1----------------------------------------------------------->
+                <div class="box-form" id="boxOne">
+                    <h3>New Customer onbording </h3>
+                    <div class="reg-form">
+                        <form>
+                            First name<br />
+                            <input type="text" id="firstName" name="first_name" value="name" />
+                            <br /> Last name
+                            <br />
+                            <input type="text" id="lastName" name="last_name" value="name" />
+                            <br /> industry name
+                            <br />
+                            <input type="text" id="indname" name="indname" value="shop/home/company name" />
+                            <br /> E-mail
+                            <br />
+                            <input type="text" id="eMail" name="eMail" value="exampel@domain.com" />
+                            <br />
+                            <button class="btn-1" id="register1" type="submit">Register</button>
+                        </form>
+ 
+                    </div>
+                </div>
+                <!---BOX-1----------------------------------------------------------->
+                <!---BOX-2----------------------------------------------------------->
+                <div class="box-form-2" id="boxTwo">
+                    <h3>Capture clint image </h3>
+                    <div class="img-capure">
+                        <video id="cam_input" height="300" width="350"></video>
+                        <canvas id="canvas_output"></canvas>
+                        <canvas id="capture"></canvas>
+                        <div id="snapshot" class="snap-shot"></div>
+                        <h4 id="imgNo2">camera not opend</h4>
+                        <button class="btn-1" id="captureBtn">Start camera</button>
+                        <button class="btn-1" id="click">Capture images</button>
+                        
+ 
+                    </div>
+                </div>
+                <!---BOX-2----------------------------------------------------------->
+                <!---BOX-3----------------------------------------------------------->
+                <div class="box-form-3">
+                    <h3>Data loader </h3>
+                    <div class="reg-form">
+                    <button class="btn-1" id="runDtaBtn">Run data processor</button>
+                    <h5>waitng for the server response</h5>
+                    </div>
+                </div>
+                <!---BOX-3----------------------------------------------------------->
+                <!---BOX-4----------------------------------------------------------->
+                <div class="box-form-4">
+                    <h3>Reboot system </h3>
+                    <div class="reg-form">
+                            <button class="btn-1" id="rebootBtn">Reboot system</button>
+                            <h5>waitng for the server response</h5>
+                    </div>
+                </div>
+                <!---BOX-4----------------------------------------------------------->
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="index.js"></script>
+<script src="modules/apiEngin.js"></script>
+<script src="modules/customerOnbording.js"></script>
+<script src="modules/param.js"></script>
+<script src="class/config.js"></script>
+<script src="modules/capture.js"></script>
+</html>
